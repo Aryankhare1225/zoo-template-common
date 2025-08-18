@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "zoo-template-common"
+version = "0.1.0"
+description = "Shared utilities and base service templates for ZOO CWL runners"
+authors = ["Aryan Khare <kharearyan78@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "zoo_template_common" }]
+license = "BSD-3-Clause"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 100
